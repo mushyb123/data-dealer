@@ -8,7 +8,7 @@ import {
   resolveFinalOutcome,
   resolveInterruption,
 } from '../systems/scoring';
-import type { DecisionFlags, Jurisdiction, RoundChoice } from '../types/game';
+import type { DecisionFlags, GamePhase, Jurisdiction, RoundChoice } from '../types/game';
 
 function getUpdatedDecisionFlags(currentFlags: DecisionFlags, choice: RoundChoice): DecisionFlags {
   return {
@@ -22,6 +22,10 @@ function getUpdatedDecisionFlags(currentFlags: DecisionFlags, choice: RoundChoic
       currentFlags.choseKeepEverythingRetention || choice.id === 'r4-c',
     choseMinimalResponse: currentFlags.choseMinimalResponse || choice.id === 'r5-a',
   };
+}
+
+function getCurrentRoundNumber(phase: GamePhase): number | null {
+  return phase.step === 'round' ? phase.roundNumber : null;
 }
 
 export function useGameState() {
@@ -78,14 +82,13 @@ export function useGameState() {
 
   function continueAfterRound() {
     setGameState((currentState) => {
-      if (currentState.currentPhase.step !== 'round' || !currentState.currentPhase.selectedChoiceId) {
+      const roundNumber = getCurrentRoundNumber(currentState.currentPhase);
+
+      if (roundNumber === null || !currentState.currentPhase.selectedChoiceId) {
         return currentState;
       }
 
-      const completedRounds = [
-        ...currentState.completedRounds,
-        currentState.currentPhase.roundNumber,
-      ];
+      const completedRounds = [...currentState.completedRounds, roundNumber];
       const nextPhase = getNextPhase(completedRounds.length);
 
       if (nextPhase.step === 'interruption') {

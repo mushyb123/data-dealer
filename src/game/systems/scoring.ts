@@ -108,7 +108,14 @@ function buildInterruptionJourneyText(
             : null,
         ];
 
-  const filtered = snippets.filter((value): value is string => Boolean(value));
+  const filtered: string[] = [];
+
+  for (const snippet of snippets) {
+    if (snippet) {
+      filtered.push(snippet);
+    }
+  }
+
   return filtered.length > 0 ? filtered.join(' ') : undefined;
 }
 
