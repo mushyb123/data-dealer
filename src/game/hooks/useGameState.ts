@@ -10,6 +10,8 @@ import {
 } from '../systems/scoring';
 import type { DecisionFlags, GamePhase, Jurisdiction, RoundChoice } from '../types/game';
 
+type RoundPhase = Extract<GamePhase, { step: 'round' }>;
+
 function getUpdatedDecisionFlags(currentFlags: DecisionFlags, choice: RoundChoice): DecisionFlags {
   return {
     ...currentFlags,
@@ -26,6 +28,10 @@ function getUpdatedDecisionFlags(currentFlags: DecisionFlags, choice: RoundChoic
 
 function getCurrentRoundNumber(phase: GamePhase): number | null {
   return phase.step === 'round' ? phase.roundNumber : null;
+}
+
+function isRoundPhase(phase: GamePhase): phase is RoundPhase {
+  return phase.step === 'round';
 }
 
 export function useGameState() {
@@ -49,16 +55,18 @@ export function useGameState() {
 
   function advanceFromRound(choiceId: string) {
     setGameState((currentState) => {
-      if (currentState.currentPhase.step !== 'round') {
+      const phase = currentState.currentPhase;
+
+      if (!isRoundPhase(phase)) {
         return currentState;
       }
 
-      if (currentState.currentPhase.selectedChoiceId) {
+      if (phase.selectedChoiceId) {
         return currentState;
       }
 
       const round = roundContent.find(
-        (entry) => entry.roundNumber === currentState.currentPhase.roundNumber,
+        (entry) => entry.roundNumber === phase.roundNumber,
       );
       const choice = round?.choices.find((entry) => entry.id === choiceId);
 
@@ -72,7 +80,7 @@ export function useGameState() {
         complianceSeverity: currentState.complianceSeverity + choice.complianceSeverity,
         decisionFlags: getUpdatedDecisionFlags(currentState.decisionFlags, choice),
         currentPhase: {
-          ...currentState.currentPhase,
+          ...phase,
           selectedChoiceId: choiceId,
           consequence: choice.outcome,
         },
@@ -82,9 +90,10 @@ export function useGameState() {
 
   function continueAfterRound() {
     setGameState((currentState) => {
-      const roundNumber = getCurrentRoundNumber(currentState.currentPhase);
+      const phase = currentState.currentPhase;
+      const roundNumber = getCurrentRoundNumber(phase);
 
-      if (roundNumber === null || !currentState.currentPhase.selectedChoiceId) {
+      if (roundNumber === null || !isRoundPhase(phase) || !phase.selectedChoiceId) {
         return currentState;
       }
 
