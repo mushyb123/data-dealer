@@ -23,33 +23,33 @@ export const finalOutcomeCopy = {
   jurisdictionOutcome: {
     Australia: {
       lowRisk:
-        'In Australia, the matter may stay below the notifiable data breach threshold, but the business still wears a clear expectation mismatch story.',
+        'In Australia, the matter may stay below the notifiable data breach threshold, but the business still carries a visible expectation mismatch and customer trust cost.',
       balanced:
-        'In Australia, the organisation is better placed to explain purpose, reasonable expectation, and why the issue may not escalate into a notifiable data breach.',
+        'In Australia, the organisation is better placed to explain original purpose, reasonable expectation, and why the issue may not escalate into a notifiable data breach.',
       elevated:
-        'In Australia, the issue now looks more likely to trigger OAIC attention, customer distrust, and hard questions about use outside the original purpose.',
+        'In Australia, the issue now looks more likely to trigger regulator attention, customer distrust, and hard questions about data use outside the original purpose.',
       severe:
-        'In Australia, the matter starts to look like a notifiable data breach with regulator exposure and immediate reputational harm.',
+        'In Australia, the matter starts to look like a notifiable data breach with regulator exposure, customer harm concerns, and immediate reputational damage.',
     },
     Thailand: {
       lowRisk:
-        'In Thailand, the issue is containable, but complaint handling and consent discipline still come under pressure.',
+        'In Thailand, the issue is containable, but consent handling, complaint management, and internal process readiness still come under pressure.',
       balanced:
-        'In Thailand, the organisation is in a stronger position to show valid process, defensible consent handling, and orderly regulator engagement if needed.',
+        'In Thailand, the organisation is in a stronger position to show valid, informed consent handling, clear documentation, and orderly regulator engagement if needed.',
       elevated:
-        'In Thailand, complaint escalation and PDPA scrutiny become more likely as response discipline starts to look uneven.',
+        'In Thailand, complaint escalation and regulator scrutiny become more likely as consent evidence and response discipline start to look uneven.',
       severe:
-        'In Thailand, the matter escalates into a significant PDPA compliance problem with complaint, enforcement, and breach-response pressure.',
+        'In Thailand, the matter escalates into a significant PDPA issue with complaint escalation, regulator engagement, and breach-response pressure.',
     },
     China: {
       lowRisk:
         'In China, the issue may remain manageable, but the business still needs to explain necessity and why the data handling stayed within the stated purpose.',
       balanced:
-        'In China, the organisation is better positioned to defend necessity, purpose limitation, and its controls around sharing and downstream use.',
+        'In China, the organisation is better positioned to defend necessity, purpose limitation, and its controls around third-party sharing and downstream use.',
       elevated:
-        'In China, the issue attracts sharper scrutiny around purpose limitation, secondary use, and whether third-party handling was properly controlled.',
+        'In China, the issue attracts sharper scrutiny around necessity, secondary use, third-party controls, and whether offshore handling was properly governed.',
       severe:
-        'In China, the matter hardens into a serious PIPL compliance failure with stronger scrutiny over necessity, sharing controls, and governance.',
+        'In China, the matter hardens into a serious PIPL compliance failure with stronger scrutiny over necessity, separate consent, third-party controls, and governance.',
     },
   },
   journeyHighlights: {

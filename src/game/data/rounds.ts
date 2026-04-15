@@ -5,7 +5,7 @@ export const roundContent: RoundData[] = [
     roundNumber: 1,
     title: 'Round 1: Collection',
     scenario:
-      'A customer starts an online tyre enquiry and quote request.\n\nProduct is focused on improving conversion and future targeting. They propose adding additional fields — vehicle usage patterns, location data, and optional contact preferences — to better tailor offers and follow-up campaigns.\n\nThe view is that more data upfront will improve both immediate conversion and long-term customer value.\n\nThere is no immediate blocker — just a question of how far to go.',
+      'A customer visits your website to get a quote for new tyres.\n\nThe business is focused on improving both conversion and long-term customer value - making the experience as smooth as possible while also building a stronger marketing pipeline.\n\nThe digital and marketing teams suggest expanding the enquiry form. In addition to basic details, they want to collect information like driving habits, location data, and preferences for follow-up contact. The thinking is that better data upfront will allow more tailored recommendations, smarter pricing, and more effective follow-up campaigns.\n\nThere is no immediate blocker - just a decision about how far the business should go in collecting customer data at this stage of the journey.',
     choices: [
       {
         id: 'r1-a',
@@ -75,12 +75,13 @@ export const roundContent: RoundData[] = [
     roundNumber: 3,
     title: 'Round 3: Sharing',
     scenario:
-      'A third-party platform offers advanced customer journey automation, analytics, and campaign optimisation.\n\nIntegrating this platform would improve targeting, enable faster experimentation, and provide deeper customer insight. It may involve vendor access to customer data and offshore processing.\n\nThe upside is strong — but it introduces reliance on an external partner and changes how data is handled.',
+      'A third-party platform offers advanced customer journey automation, analytics, and campaign optimisation.\n\nIntegrating this platform would improve targeting, enable faster experimentation, and provide deeper customer insight. It may involve vendor access to customer data and offshore processing.\n\nThe upside is strong - but it introduces reliance on an external partner and changes how data is handled.',
     choices: [
       {
         id: 'r3-a',
         title: 'Local controlled setup',
-        description: 'Keep data internal with limited tooling and tighter control.',
+        description:
+          'Keep data internal using existing systems, with limited analytics and slower campaign execution.',
         consequenceText:
           'The organisation avoids added vendor complexity and keeps data handling close to home, but commercial capability improves only modestly.',
         outcome: { revenue: 50000, risk: 0, reputation: 0 },
@@ -89,7 +90,8 @@ export const roundContent: RoundData[] = [
       {
         id: 'r3-b',
         title: 'Managed vendor model',
-        description: 'Engage a vendor with defined controls and oversight.',
+        description:
+          'Use a third-party platform with defined controls, sharing selected customer data to improve targeting and campaign performance.',
         consequenceText:
           'The business gains stronger analytics and experimentation while still preserving a workable control narrative for internal stakeholders.',
         outcome: { revenue: 150000, risk: 1, reputation: 0 },
@@ -98,7 +100,8 @@ export const roundContent: RoundData[] = [
       {
         id: 'r3-c',
         title: 'Full vendor enablement',
-        description: 'Fully integrate third-party platform for maximum capability and scale.',
+        description:
+          'Fully integrate a third-party platform, enabling broad data access for real-time analytics, automation, and rapid campaign optimisation.',
         consequenceText:
           'Performance capability jumps, but operational reliance on a third party and broader data handling now create a much harder issue to contain if tested.',
         outcome: { revenue: 250000, risk: 3, reputation: 0 },
@@ -110,7 +113,7 @@ export const roundContent: RoundData[] = [
     roundNumber: 4,
     title: 'Round 4: Retention',
     scenario:
-      'Customer data has now accumulated across systems — enquiry data, marketing interactions, and vendor platforms.\n\nThere is internal discussion about retaining this data indefinitely to support future analytics, re-engagement campaigns, and long-term customer profiling.\n\nDeleting data reduces risk, but limits future commercial opportunities.',
+      'Customer data has now accumulated across systems - enquiry data, marketing interactions, and vendor platforms.\n\nThere is internal discussion about retaining this data indefinitely to support future analytics, re-engagement campaigns, and long-term customer profiling.\n\nDeleting data reduces risk, but limits future commercial opportunities and insight generation.',
     choices: [
       {
         id: 'r4-a',
@@ -145,7 +148,7 @@ export const roundContent: RoundData[] = [
     roundNumber: 5,
     title: 'Round 5: Response',
     scenario:
-      'A privacy issue is beginning to emerge — customer concerns, internal questions, and external attention are starting to build.\n\nThe organisation needs to respond quickly, manage communications, and demonstrate control over its data practices.\n\nPreparation levels vary, and investment in response capability competes with other priorities.',
+      'Following the recent complaint and external enquiries, an internal review identifies that customer enquiry data has been used for broader marketing and shared with a third-party platform in ways that are not fully understood across the business.\n\nSome customers have received communications they did not expect, and there is uncertainty about what data has been shared, where it is stored, and how it has been used.\n\nSenior management is now involved. There is pressure to quickly assess the situation, manage customer communications, and determine whether any regulatory notification may be required.\n\nThe issue is not yet fully defined - but it is escalating, and the response approach will shape how it unfolds.',
     choices: [
       {
         id: 'r5-b',
