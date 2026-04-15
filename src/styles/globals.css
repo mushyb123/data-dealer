@@ -2,32 +2,32 @@
   color-scheme: dark;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background:
-    linear-gradient(135deg, rgba(160, 14, 23, 0.16), transparent 28%),
-    linear-gradient(180deg, #050505 0%, #101010 56%, #171717 100%);
+    linear-gradient(140deg, rgba(200, 16, 46, 0.08), transparent 30%),
+    linear-gradient(180deg, #0f1113 0%, #15181b 52%, #1a1d21 100%);
   color: #f5f5f5;
-  --surface: rgba(12, 12, 12, 0.94);
-  --surface-strong: rgba(22, 22, 22, 0.98);
-  --surface-border: rgba(255, 255, 255, 0.11);
-  --text-muted: #b8b8b8;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --text-muted: #c9d1d9;
   --accent: #c8102e;
   --accent-strong: #8f0f22;
-  --accent-soft: rgba(200, 16, 46, 0.18);
+  --accent-soft: rgba(200, 16, 46, 0.12);
   --danger: #d33a4d;
-  --safe: #d9d9d9;
+  --safe: #d7dde3;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 26%),
     repeating-linear-gradient(
       120deg,
       transparent 0 28px,
-      rgba(255, 255, 255, 0.018) 28px 30px,
+      rgba(255, 255, 255, 0.012) 28px 30px,
       transparent 30px 58px
     ),
-    linear-gradient(180deg, #050505 0%, #121212 100%);
+    linear-gradient(180deg, #0f1113 0%, #1a1d21 100%);
 }
 
 button {
@@ -64,20 +64,20 @@ input {
   min-height: calc(100vh - 24px);
   display: grid;
   align-content: start;
-  gap: 14px;
-  padding: 18px;
+  gap: 16px;
+  padding: 20px;
   border: 1px solid var(--surface-border);
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 22%),
-    linear-gradient(135deg, rgba(200, 16, 46, 0.08), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 22%),
+    linear-gradient(135deg, rgba(200, 16, 46, 0.04), transparent 34%),
     repeating-linear-gradient(
       45deg,
-      rgba(255, 255, 255, 0.012) 0 2px,
+      rgba(255, 255, 255, 0.008) 0 2px,
       transparent 2px 8px
     ),
     var(--surface);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.28);
   position: relative;
   overflow: hidden;
 }
@@ -87,8 +87,8 @@ input {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(200, 16, 46, 0.1), transparent 24%),
-    linear-gradient(160deg, transparent 0 68%, rgba(255, 255, 255, 0.03) 68% 69%, transparent 69% 100%);
+    radial-gradient(circle at top right, rgba(200, 16, 46, 0.05), transparent 24%),
+    linear-gradient(160deg, transparent 0 68%, rgba(255, 255, 255, 0.016) 68% 69%, transparent 69% 100%);
   pointer-events: none;
 }
 
@@ -102,13 +102,13 @@ input {
 
 .phone-screen--result {
   background:
-    radial-gradient(circle at top, rgba(200, 16, 46, 0.16), transparent 30%),
+    radial-gradient(circle at top, rgba(200, 16, 46, 0.08), transparent 30%),
     var(--surface);
 }
 
 .hero-block {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   padding-top: 12px;
 }
 
@@ -128,6 +128,7 @@ input {
 .intro-copy {
   color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.55;
 }
 
 .panel-stack,
@@ -142,14 +143,13 @@ input {
   border: 1px solid var(--surface-border);
   border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.015), transparent 40%),
-    rgba(255, 255, 255, 0.025);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.05);
 }
 
 .game-panel--feature {
   background:
-    linear-gradient(135deg, rgba(200, 16, 46, 0.12), transparent 36%),
+    linear-gradient(135deg, rgba(200, 16, 46, 0.045), transparent 34%),
     var(--surface-strong);
 }
 
@@ -164,9 +164,10 @@ input {
   width: 100%;
   padding: 16px 18px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
   font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .option-grid {
@@ -178,13 +179,14 @@ input {
 .option-chip {
   padding: 16px 10px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #edf4fa;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
   font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .option-chip--selected {
-  background: linear-gradient(180deg, rgba(200, 16, 46, 0.28), rgba(143, 15, 34, 0.32));
+  background: rgba(200, 16, 46, 0.14);
   border: 1px solid rgba(200, 16, 46, 0.5);
 }
 
@@ -192,13 +194,12 @@ input {
   width: 100%;
   padding: 16px 18px;
   border-radius: 12px;
-  background:
-    linear-gradient(180deg, #d31633 0%, #990f25 100%);
-  color: #fbfbfb;
+  background: linear-gradient(180deg, #c31631 0%, #ab132b 100%);
+  color: #f5f5f5;
   font-weight: 800;
   font-size: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 22px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .primary-button--large {
@@ -216,12 +217,12 @@ input {
 .compact-header {
   display: grid;
   gap: 10px;
-  padding: 12px 14px;
+  padding: 11px 14px;
   border: 1px solid var(--surface-border);
   border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent),
-    rgba(255, 255, 255, 0.028);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.045);
 }
 
 .compact-header__top,
@@ -240,7 +241,7 @@ input {
 .topline-name {
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-muted);
   font-size: 0.78rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -263,6 +264,7 @@ input {
 
 .revenue-tile strong {
   font-size: 2rem;
+  color: #f5f5f5;
 }
 
 .revenue-tile--compact strong {
@@ -294,14 +296,14 @@ input {
 .meter-track {
   height: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
   overflow: hidden;
 }
 
 .meter-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #4b4b4b 0%, var(--accent) 100%);
+  background: linear-gradient(90deg, #5b6168 0%, var(--accent) 100%);
 }
 
 .screen-title {
@@ -312,23 +314,22 @@ input {
 .scenario-copy {
   color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .choice-card {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
-  padding: 16px;
+  padding: 17px;
   text-align: left;
   border-radius: 12px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent),
-    rgba(255, 255, 255, 0.035);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: border-color 140ms ease, box-shadow 140ms ease, opacity 140ms ease,
     background 140ms ease, transform 140ms ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
 .choice-card:hover:not(:disabled) {
@@ -339,14 +340,14 @@ input {
 .choice-card--selected {
   border-color: rgba(200, 16, 46, 0.92);
   background:
-    linear-gradient(180deg, rgba(200, 16, 46, 0.2), rgba(143, 15, 34, 0.08)),
-    rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.22), 0 16px 28px rgba(0, 0, 0, 0.34);
+    linear-gradient(180deg, rgba(200, 16, 46, 0.12), rgba(200, 16, 46, 0.04)),
+    rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 1px rgba(200, 16, 46, 0.26), 0 14px 24px rgba(0, 0, 0, 0.2);
 }
 
 .choice-card--disabled {
-  opacity: 0.32;
-  filter: grayscale(0.18) saturate(0.55);
+  opacity: 0.42;
+  filter: grayscale(0.12) saturate(0.7);
 }
 
 .choice-card__top {
@@ -359,7 +360,7 @@ input {
 .choice-selected-badge {
   padding: 5px 9px;
   border-radius: 999px;
-  background: rgba(200, 16, 46, 0.22);
+  background: rgba(200, 16, 46, 0.14);
   color: transparent;
   font-size: 0;
   font-weight: 700;
@@ -370,7 +371,7 @@ input {
 
 .choice-selected-badge::before {
   content: "Selected";
-  color: #ffe6ea;
+  color: #f5d7dd;
   font-size: 0.74rem;
 }
 
@@ -379,7 +380,7 @@ input {
 }
 
 .decision-lock {
-  color: #ffe6ea;
+  color: #f0d0d7;
   font-size: 0.84rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -391,7 +392,7 @@ input {
 }
 
 .choice-index {
-  color: #d7d7d7;
+  color: #d5dbe1;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -400,13 +401,13 @@ input {
 
 .consequence-card {
   display: grid;
-  gap: 12px;
+  gap: 14px;
   padding: 16px;
   border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(200, 16, 46, 0.12), rgba(200, 16, 46, 0.04)),
-    rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(200, 16, 46, 0.25);
+    linear-gradient(180deg, rgba(200, 16, 46, 0.06), rgba(200, 16, 46, 0.02)),
+    rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(200, 16, 46, 0.22);
 }
 
 .consequence-title {
@@ -451,31 +452,33 @@ input {
 
 .interrupt-card {
   display: grid;
-  gap: 16px;
+  gap: 18px;
   padding: 22px;
   border: 1px solid rgba(200, 16, 46, 0.26);
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(200, 16, 46, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(200, 16, 46, 0.08), transparent 34%),
     var(--surface-strong);
 }
 
 .interrupt-copy {
-  color: #d7d7d7;
+  color: #d8dee4;
+  line-height: 1.55;
 }
 
 .interrupt-note {
-  color: #ffbcc7;
+  color: #f2c0ca;
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .result-hero {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   padding: 16px;
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(200, 16, 46, 0.22), transparent 38%),
+    linear-gradient(135deg, rgba(200, 16, 46, 0.08), transparent 38%),
     var(--surface-strong);
   border: 1px solid rgba(200, 16, 46, 0.28);
 }
@@ -511,7 +514,7 @@ input {
 .result-score-block strong {
   font-size: 2.2rem;
   line-height: 1;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .result-grid {
@@ -525,7 +528,7 @@ input {
   gap: 4px;
   padding: 12px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -536,16 +539,16 @@ input {
 
 .result-summary {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   padding: 14px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .result-summary--warning {
   border: 1px solid rgba(200, 16, 46, 0.28);
-  background: rgba(200, 16, 46, 0.08);
+  background: rgba(200, 16, 46, 0.05);
 }
 
 .journey-list {
@@ -565,7 +568,7 @@ input {
 
 @media (max-width: 640px) {
   .phone-screen {
-    padding: 16px;
+    padding: 18px 16px;
     border-radius: 24px;
   }
 
